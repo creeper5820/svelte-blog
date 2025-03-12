@@ -1,0 +1,2 @@
+name = "svelte-blog"
+main = "./src/app.d.ts"
