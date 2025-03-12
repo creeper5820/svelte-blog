@@ -1,18 +1,15 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-static';
 
 export default {
     kit: {
         adapter: adapter({
-            // See below for an explanation of these options
-            routes: {
-                include: ['/*'],
-                exclude: ['<all>']
-            },
-            platformProxy: {
-                configPath: undefined,
-                environment: undefined,
-                persist: undefined
-            }
+            // default options are shown. On some platforms
+            // these options are set automatically — see below
+            pages: 'build',
+            assets: 'build',
+            fallback: undefined,
+            precompress: false,
+            strict: true
         })
     }
 };
